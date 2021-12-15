@@ -19,7 +19,7 @@ class CogSlashMenu(Cog):
         description="Sends a message with a map and a dropdown of UTC time-zones",
         guild_ids=read_config(),
     )
-    async def _create_menu_europe(self, ctx: SlashContext):
+    async def _create_menu_utc(self, ctx: SlashContext):
         if ctx.author.id != self.bot.get_guild(ctx.guild_id).owner_id: return
         await self.bot.wait_until_ready()
 
